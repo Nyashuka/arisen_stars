@@ -4,7 +4,7 @@ using UnityEngine;
 public class Damager : MonoBehaviour
 {
     [SerializeField] private int _damage;
-    private Action OnDeathActionEvent;
+    private Action DeathActionEvent;
 
     public void SetDamage(int damage)
     {
@@ -13,7 +13,7 @@ public class Damager : MonoBehaviour
 
     public void OnDeathAction(Action onHit)
     {
-        OnDeathActionEvent += onHit;
+        DeathActionEvent += onHit;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -22,7 +22,7 @@ public class Damager : MonoBehaviour
         {
             if (!damageable.MakeDamage(_damage))
             {
-                OnDeathActionEvent?.Invoke();
+                DeathActionEvent?.Invoke();
             }
 
             Destroy(gameObject);

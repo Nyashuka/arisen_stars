@@ -9,7 +9,8 @@ public class Health : MonoBehaviour
     
     private Characteristics _characteristics;
     
-    private int _currentHealth;
+    [SerializeField] private int _currentHealth;
+    [SerializeField] private GameObject _deathEffect;
 
     public int MaxHealthValue => _characteristics.MaxHealthValue;
     public int MinHealthValue => _characteristics.MinHealthValue;
@@ -53,6 +54,7 @@ public class Health : MonoBehaviour
 
     public void Kill()
     {
+        Destroy(Instantiate(_deathEffect, transform.position, transform.rotation), 1f);
         Destroy(gameObject);
     }
 }

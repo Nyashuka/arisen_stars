@@ -7,22 +7,22 @@ public class AudioController : MonoBehaviour
 {
 
     [Header("Sound")]  
-    private AudioSource audio;
+    [SerializeField] private AudioSource[] _audio;
+    [SerializeField] private Slider _audioVolumeSlider;
 
-    void Start()
+    private void Start()
     {
-        
-        audio = GetComponent<AudioSource>();
+        _audioVolumeSlider.onValueChanged.AddListener(delegate { ChangeAudioVolume(); });
+        _audioVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
     }
 
-    
-    void Update()
+    public void ChangeAudioVolume()
     {
-        audio.volume = PlayerPrefs.GetFloat("MusicVolume");
-        
-    }
-    private void FixedUpdate()
-    {
-        
-    }
+        foreach (var audio in _audio)
+        {
+            audio.volume = _audioVolumeSlider.value;
+        }
+
+        PlayerPrefs.SetFloat("MusicVolume", _audioVolumeSlider.value);
+    }  
 }

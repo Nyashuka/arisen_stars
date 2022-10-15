@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour, IPauseHandler
+public class MoveCharacterController : MonoBehaviour, IPauseHandler
 {
     [SerializeField] private float _speed;
     [SerializeField] private Boundary _boundary;

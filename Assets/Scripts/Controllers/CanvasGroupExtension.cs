@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class CanvasExtension 
+public static class CanvasGroupExtension 
 {
     public static void IsEnableCanvasGroup(this CanvasGroup canvasGroup, bool isEnabled)
     {

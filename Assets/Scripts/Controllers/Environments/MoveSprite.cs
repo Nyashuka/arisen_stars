@@ -9,8 +9,6 @@ public class MoveSprite : MonoBehaviour
     private Vector3 target;
     private Vector2 startPos;
 
-
-
     private void Update()
     {
 

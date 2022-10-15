@@ -6,11 +6,11 @@ using UnityEngine.Serialization;
 public class PauseHandlerInitializer : MonoBehaviour
 {
     [FormerlySerializedAs("_pauseManager")] [SerializeField] private Pause pause;
-    [SerializeField] private CharacterController _characterController;
+    [SerializeField] private MoveCharacterController _characterController;
     [SerializeField] private SimplePlayerAttack _simplePlayerAttack;
     [SerializeField] private UltimatePlayerAttack _ultimatePlayerAttack;
 
-    void Start()
+    private void Start()
     {
         pause.Register(new GamePauseBehaviour());
         pause.Register(_characterController);

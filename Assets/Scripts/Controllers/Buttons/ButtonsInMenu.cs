@@ -6,10 +6,8 @@ using UnityEngine.UI;
 
 public class ButtonsInMenu : MonoBehaviour
 {
-    [Header("Music")]
-    private AudioSource audio;
+    [Header("Settings")]
     public GameObject settings;
-    public Slider slider;
     [Header("Shop")]
     public GameObject shopPanel;
     public GameObject upgradePanel;
@@ -18,8 +16,6 @@ public class ButtonsInMenu : MonoBehaviour
     private void Start()
     {
         shopOpened = false;
-        slider.value = PlayerPrefs.GetFloat("MusicVolume");
-        audio = GetComponent<AudioSource>();
     }
 
     public void StartGame()
@@ -37,13 +33,6 @@ public class ButtonsInMenu : MonoBehaviour
     public void Settings()
     {
         settings.SetActive(!settings.activeSelf);
-    }
-    private void Update()
-    {
-        
-        audio.volume = PlayerPrefs.GetFloat("MusicVolume");
-        
-        PlayerPrefs.SetFloat("MusicVolume", slider.value);
     }
 
     public void ShopOpen()
