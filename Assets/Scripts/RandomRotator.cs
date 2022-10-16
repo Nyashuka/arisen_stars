@@ -9,7 +9,7 @@ public class RandomRotator : MonoBehaviour
     
     private void Start()
     {
-        _rigidbody.angularVelocity = Random.insideUnitSphere * _tumble;
+        
     }
 
 }

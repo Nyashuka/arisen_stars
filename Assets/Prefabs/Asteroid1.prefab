@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 2612525235034792940}
   - component: {fileID: 4946543884776731593}
   - component: {fileID: 4973377327678811487}
-  - component: {fileID: 6903352439093610616}
-  - component: {fileID: 1801366463708614314}
   - component: {fileID: -4114151138888432669}
   - component: {fileID: 8160961717730667777}
   - component: {fileID: 8076666412159893951}
   - component: {fileID: 265112375875943028}
+  - component: {fileID: -4575688941530612918}
   m_Layer: 0
   m_Name: Asteroid1
   m_TagString: Untagged
@@ -69,34 +68,6 @@ CapsuleCollider:
   m_Height: 1.7336338
   m_Direction: 1
   m_Center: {x: -0.02936554, y: -0.054249406, z: -0.016059875}
---- !u!114 &6903352439093610616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4872299714118425849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c4d9152fc787454bb7a877f6749965f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tumble: 1
-  _rigidbody: {fileID: 4946543884776731593}
---- !u!114 &1801366463708614314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4872299714118425849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33bd5c2b6e15cfa42b9dbaf8d4bf6484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 4946543884776731593}
-  _speed: -4
 --- !u!114 &-4114151138888432669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +120,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _layer: 8
+--- !u!114 &-4575688941530612918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872299714118425849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04837cc512edf8c4782c61bb1b3f4e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tumble: 1
+  _speed: -4
+  _rigidbody: {fileID: 4946543884776731593}
 --- !u!1 &6023413250282120008
 GameObject:
   m_ObjectHideFlags: 0

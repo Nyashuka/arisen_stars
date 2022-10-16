@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 7456659234437107577}
   - component: {fileID: 4900065667338978314}
   - component: {fileID: 8373676651241410359}
-  - component: {fileID: 4063857689122336920}
-  - component: {fileID: 958244848823902750}
   - component: {fileID: 5174091466847470487}
   - component: {fileID: 7542517756527966136}
   - component: {fileID: 5840096575690173446}
   - component: {fileID: 7257277256437608553}
+  - component: {fileID: -911853990996013172}
   m_Layer: 0
   m_Name: Asteroid3
   m_TagString: Untagged
@@ -69,34 +68,6 @@ CapsuleCollider:
   m_Height: 1.6360459
   m_Direction: 0
   m_Center: {x: -0.00417161, y: -0.01992917, z: 0.029013634}
---- !u!114 &4063857689122336920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2849693562518335309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c4d9152fc787454bb7a877f6749965f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tumble: 1
-  _rigidbody: {fileID: 4900065667338978314}
---- !u!114 &958244848823902750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2849693562518335309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33bd5c2b6e15cfa42b9dbaf8d4bf6484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 4900065667338978314}
-  _speed: -4
 --- !u!114 &5174091466847470487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +120,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _layer: 8
+--- !u!114 &-911853990996013172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2849693562518335309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04837cc512edf8c4782c61bb1b3f4e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tumble: 1
+  _speed: -4
+  _rigidbody: {fileID: 4900065667338978314}
 --- !u!1001 &2568509051978116136
 PrefabInstance:
   m_ObjectHideFlags: 0
