@@ -25,8 +25,6 @@ public class SimplePlayerAttack : MonoBehaviour, IPauseHandler
         if (_isPaused)
             return;
 
-        _audio.volume = PlayerPrefs.GetFloat("MusicVolume");
-
         if ((Input.touchCount == 1 || Input.GetMouseButton(0)) && Time.time > _nextFireTime)
         {
             _nextFireTime = Time.time + _attackCooldown;
@@ -35,7 +33,7 @@ public class SimplePlayerAttack : MonoBehaviour, IPauseHandler
             damager.SetDamage(_characteristics.Damage);
             damager.OnDeathAction(OnEnemyKilling);
 
-            GetComponent<AudioSource>().Play();
+            _audio.Play();
         }
     }
 

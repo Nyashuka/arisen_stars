@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tumble: 1
+  _rigidbody: {fileID: 4900065667338978314}
 --- !u!114 &958244848823902750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bd5c2b6e15cfa42b9dbaf8d4bf6484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -4
+  _rigidbody: {fileID: 4900065667338978314}
+  _speed: -4
 --- !u!114 &5174091466847470487
 MonoBehaviour:
   m_ObjectHideFlags: 0

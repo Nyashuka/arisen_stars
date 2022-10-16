@@ -17,8 +17,6 @@ public class AsteroidSpawner : MonoBehaviour
     private void Start()
     {
         StartCoroutine(SpawnWaves());
-
-    
     }
  
 
@@ -39,8 +37,8 @@ public class AsteroidSpawner : MonoBehaviour
             _spawnValues.x = x - 1.3f;
         }
 
-
         yield return new WaitForSeconds(_startWait); // waiting for start asteroid
+        
         while (true)
         {
             for (int i = 0; i < _hazardCount; i++)

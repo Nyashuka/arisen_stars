@@ -19,8 +19,8 @@ public class EvasiveManeure : MonoBehaviour
     
     private void Start()
     {
-        _currentSpeed = GetComponent<Rigidbody>().velocity.z;
         _rigidbody = GetComponent<Rigidbody>();
+        _currentSpeed = _rigidbody.velocity.z;    
         StartCoroutine(Evade());
     }
 
@@ -64,7 +64,7 @@ public class EvasiveManeure : MonoBehaviour
     {
         float newManeuvre = Mathf.MoveTowards
         (
-            GetComponent<Rigidbody>().velocity.x,
+            _rigidbody.velocity.x,
             _targetManeuvre,
             _maneuvreSpeed * Time.deltaTime
     

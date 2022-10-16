@@ -5,21 +5,11 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    Rigidbody rb;
-    public float speed;
+    [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private float _speed;
     
     public void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.forward * speed;
-       
+        _rigidbody.velocity = transform.forward * _speed;     
     }
-    void Update()
-    {
-        
-        
-    }
-
-
-
 }

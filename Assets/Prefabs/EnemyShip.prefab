@@ -130,7 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bd5c2b6e15cfa42b9dbaf8d4bf6484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -4
+  _rigidbody: {fileID: 3298081324277726781}
+  _speed: -4
 --- !u!82 &1894440928522648992
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5082,7 +5083,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 1b4bad6cea5a94611b21f9757fe41444, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

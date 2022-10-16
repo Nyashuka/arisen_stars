@@ -9,19 +9,18 @@ public class WeaponController : MonoBehaviour
     public float fireRate;
     public float delay;
 
-    private AudioSource audioS;
+    private AudioSource _fireSound;
 
     private void Start()
     {
-        audioS = GetComponent<AudioSource>();
+        _fireSound = GetComponent<AudioSource>();
         InvokeRepeating("Fire", delay, fireRate);
     }
     
     public void Fire()
     {
-        Damager damager = Instantiate(shot, shotSpawn.position, shotSpawn.rotation).GetComponent<Damager>();
-        damager.SetDamage(100);
-        audioS.Play();
+        Instantiate(shot, shotSpawn.position, shotSpawn.rotation).GetComponent<Damager>().SetDamage(100);
+        _fireSound.Play();
     }
 }
 
